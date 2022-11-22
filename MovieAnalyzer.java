@@ -413,26 +413,3 @@ public class MovieAnalyzer {
     }
     return o;
   }
-
-
-  public static void main(String[] args) throws IOException, URISyntaxException {
-    MovieAnalyzer m = new MovieAnalyzer(
-        "/Users/lychee./Downloads/A1_Sample/resources/imdb_top_5001.csv");
-    System.out.println(m.getMovieCountByYear());
-    System.out.println(m.getTopStars(2, "gross"));
-    System.out.println(m.getMovieCountByGenre());
-    List<String> a = new ArrayList();
-    a.add("sss");
-    a.add("aaa");
-    System.out.println(m.getCoStarCount().keySet().size());
-    System.out.println(m.getTopStars(20, "rating"));
-    System.out.println(m.getTopMovies(5, "overview"));
-
-    for (int i = 1; i < m.list.size(); i++) {
-      for (int j = 0; j < m.list.get(i).length; j++) {
-        System.out.println(m.list.get(i)[j]);
-      }
-      System.out.println("-------------");
-    } //读取数据样例
-  }
-}
